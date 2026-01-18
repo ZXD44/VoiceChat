@@ -45,8 +45,28 @@
 
 ---
 
-## ⚠️ หมายเหตุสำหรับผู้ดูแลเซิร์ฟเวอร์
-ระบบนี้เป็นเพียงฝั่ง **Minecraft Client/Server (Addon)** ซึ่งต้องทำงานคู่กับ **Discord Bot Backend** (Node.js/Python) เพื่อควบคุมการย้ายห้องเสียงใน Discord ตามตำแหน่งเดิมที่ตั้งไว้ในโค้ด `scripts/main.js` (ตำแหน่ง `BACKEND_URL`)
+## ⚠️ หมายเหตุสำหรับผู้ดูแลเซิร์ฟเวอร์ (Server Admin Note)
+
+### 1. การตั้งค่า Backend
+ระบบนี้ต้องทำงานคู่กับ **Discord Bot Backend** (Node.js/Python) เพื่อควบคุมการย้ายห้องเสียงใน Discord ตามตำแหน่งเดิมที่ตั้งไว้ในโค้ด `scripts/main.js` (ตำแหน่ง `BACKEND_URL`)
+
+### 2. การอนุญาตสิทธิ์ Script (Permissions) **[สำคัญมาก!]**
+หากคุณรันบน **Dedicated Server (BDS)** คุณต้องอนุญาตให้ Script เข้าถึงระบบเครือข่ายได้ โดยแก้ไฟล์ดังนี้:
+- **ไฟล์:** `config/default/permissions.json`
+- **เพิ่มบรรทัดนี้ลงในรายการ:** `"@minecraft/server-net"`
+
+**ตัวอย่างไฟล์ `permissions.json`:**
+```json
+{
+  "allowed_modules": [
+    "@minecraft/server",
+    "@minecraft/server-ui",
+    "@minecraft/server-net",
+    "@minecraft/server-admin"
+  ]
+}
+```
+*หากไม่แก้ส่วนนี้ ระบบจะไม่สามารถติดต่อกับ Discord Bot ได้*
 
 ---
 
