@@ -16,13 +16,13 @@ import { ModalFormData } from "@minecraft/server-ui";
 const DEFAULT_RADIUS = 5;           // ระยะเริ่มต้นที่แนะนำ (5 - 10 บล็อก)
 const CHECK_INTERVAL = 10;          // ความถี่ตรวจสอบ (ticks)
 const BACKEND_URL = "http://127.0.0.1:3000/api/proximity";
+const API_SECRET = "mcpe-voice-secret"; // ⚠️ ต้องตรงกับใน .env ของ Discord Bot
 const LOG_TO_CHAT = false;          // แสดง Debug ในแชท
 
 // ─────────────────────────────────────────────────────────────
 // ตัวแปรระบบ
 // ─────────────────────────────────────────────────────────────
 const activeConnections = new Set();
-
 // ─────────────────────────────────────────────────────────────
 // ฟังก์ชันแสดงวงกลมระยะเสียง (Particles)
 // ─────────────────────────────────────────────────────────────
@@ -65,7 +65,10 @@ async function sendToBackend(data) {
         const req = new HttpRequest(BACKEND_URL);
         req.method = HttpRequestMethod.Post;
         req.id = "voice_update";
-        req.headers = [new HttpHeader("Content-Type", "application/json")];
+        req.headers = [
+            new HttpHeader("Content-Type", "application/json"),
+            new HttpHeader("x-api-key", API_SECRET)
+        ];
         req.body = JSON.stringify(data);
 
         const response = await http.request(req);
