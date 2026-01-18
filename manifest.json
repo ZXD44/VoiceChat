@@ -1,0 +1,71 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§eระบบเสียงตามระยะ\n§7สร้างโดย ZirconX",
+        "name": "§b§lระบบเสียงตามระยะ",
+        "uuid": "5f9e8d7c-3b2a-4a1e-9d8c-7b6a5f4e3d2c",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "โมดูล Script",
+            "type": "script",
+            "uuid": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+            "version": [
+                1,
+                0,
+                0
+            ],
+            "entry": "scripts/main.js"
+        },
+        {
+            "description": "โมดูลข้อมูลสำหรับไอเทม",
+            "type": "data",
+            "uuid": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.5.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-net",
+            "version": "1.0.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.1.0-beta"
+        },
+        {
+            "uuid": "a1b2c3d4-e5f6-4a1b-9c8d-7e6f5a4b3c2d",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "capabilities": [
+        "script_eval"
+    ],
+    "metadata": {
+        "authors": [
+            "ZirconX"
+        ]
+    }
+}
