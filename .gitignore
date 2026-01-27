@@ -1,0 +1,52 @@
+# =====================================
+# SECURITY - DO NOT SHARE THESE FILES
+# =====================================
+
+# Encrypted source backups (contains original code)
+*.zrc_lock
+
+# Security config (contains PIN hash)
+.security_config
+
+# Unlock dashboard script
+DASHBOARD.py
+
+# Environment variables (secrets, tokens)
+.env
+.env.local
+.env.*.local
+
+# =====================================
+# NODE.JS
+# =====================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# =====================================
+# SYSTEM FILES
+# =====================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+
+# =====================================
+# IDE / EDITOR
+# =====================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =====================================
+# MINECRAFT BEDROCK
+# =====================================
+# Keep behavior pack and resource pack clean
+*.mcpack
+*.mcworld
+*.mcaddon

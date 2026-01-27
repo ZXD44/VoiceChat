@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "VoiceChat_RP",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "discord_remote": {
+            "textures": "textures/items/discord_remote"
+        }
+    }
+}
