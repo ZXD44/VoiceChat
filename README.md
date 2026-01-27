@@ -3,7 +3,7 @@
 ### ระบบเสียงตามระยะ (Proximity Voice Chat) สำหรับ Minecraft Bedrock
 **พัฒนาโดย:** ZirconX
 
-![Version](https://img.shields.io/github/v/release/ZXD44/VoiceChat?label=Version&color=blue)
+[![Version](https://img.shields.io/github/v/release/ZXD44/VoiceChat?label=Version&color=blue)](https://github.com/ZXD44/VoiceChat/releases/latest) [![Download](https://img.shields.io/badge/Download-Latest_Release-2ea44f)](https://github.com/ZXD44/VoiceChat/releases/latest)
 
 ---
 
